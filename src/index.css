@@ -20,7 +20,7 @@
   }
 
   .screen-wrapper {
-    @apply relative w-full bg-[url('/assets/images/shark.gif')] bg-cover bg-bottom z-[1] before:absolute before:left-0 before:top-0 before:w-full before:h-full before:bg-black before:opacity-70 before:z-[-1];
+    @apply relative w-full bg-[url('/assets/images/shark.gif')] bg-cover bg-bottom z-[1] before:absolute before:left-0 before:top-0 before:w-full before:h-full before:bg-black before:opacity-30 before:z-[-1];
   }
 
   /* SCROLLBAR */

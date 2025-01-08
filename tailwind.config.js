@@ -12,6 +12,9 @@ export default {
       },
     },
     extend: {
+      backgroundImage: {
+        "sea-blue": "linear-gradient(to right, #2b5876, #4e4376)",
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
