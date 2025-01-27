@@ -27,9 +27,9 @@ const SwapContainer = () => {
     <React.Fragment>
       <div className="relative w-full border border-[#2b5876] rounded-lg overflow-hidden z-[1]">
         <div className="absolute left-0 top-0 w-full h-full bg-sea-blue opacity-95 z-[-1]"></div>
-        <div className="p-4 border-b">
+        {/* <div className="p-4 border-b">
           <h2>Swap</h2>
-        </div>
+        </div> */}
         <div className="p-4 py-8">
           <div className="grid grid-cols-12 gap-y-4">
             <div className="col-span-12">
