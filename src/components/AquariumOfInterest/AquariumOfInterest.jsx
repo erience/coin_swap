@@ -1,39 +1,19 @@
-import TokensModal from "@/components/TokensModal/TokensModal";
 import React, { useState } from "react";
 import StackingDataModal from "../StackingDataModal/StackingDataModal";
 import HarvestModal from "../HarvestModal/HarvestModal";
 import StackingModal from "../StackingModal/StackingModal";
 
 const AquariumOfInterest = () => {
-  const [tokensModal1, setTokensModal1] = useState(false);
-  const [tokensModal2, setTokensModal2] = useState(false);
   const [walletConnected, setWalletConnected] = useState(false);
   const [harvestModal, setHarvestModal] = useState(false);
   const [stakeModal, setStakeModal] = useState(false);
   const [stakeDataModal, setStakeDataModal] = useState(false);
-  const [fromToken, setFromToken] = useState({
-    name: "PancakeSwap Token",
-    label: "CAKE",
-    value: "0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82",
-    chainId: 56,
-    decimals: 18,
-    logo: "https://tokens.pancakeswap.finance/images/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82.png",
-    type: "token",
-  });
-  const [toToken, setToToken] = useState({
-    name: "Binance Pegged BUSD",
-    label: "BUSD",
-    value: "0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56",
-    chainId: 56,
-    decimals: 18,
-    logo: "https://tokens.pancakeswap.finance/images/0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56.png",
-    type: "token",
-  });
+  
   return (
     <React.Fragment>
       <div className="relative w-full border border-[#2b5876] rounded-lg overflow-hidden z-[1]">
         <div className="absolute left-0 top-0 w-full h-full bg-sea-blue opacity-95 z-[-1]"></div>
-        <div className="p-4 py-8">
+        <div className="p-4 py-9">
           <div className="grid grid-cols-12 gap-y-8">
             <div className="col-span-12">
               <div className="flex items-center justify-between gap-4">
@@ -76,11 +56,11 @@ const AquariumOfInterest = () => {
                   <div className="relative font-medium text-sm">
                     Earned SHARK
                   </div>
-                  <input  className="text-black"/> 
+                  <input placeholder="Enter Amount" className="inline-block text-xs py-2 px-3.5 rounded-md bg-neutral-900 hover:bg-neutral-800 text-white disabled:opacity-50"/>
                   <button
                     type="button"
                     className="inline-block text-xs py-1.5 px-3.5 rounded-md bg-neutral-900 hover:bg-neutral-800 text-white disabled:opacity-50"
-                    onClick={() => setHarvestModal(true)}
+                    // onClick={() => setHarvestModal(true)}
                   >
                     Claim Rewards
                   </button>
@@ -120,16 +100,7 @@ const AquariumOfInterest = () => {
           </div>
         </div>
       </div>
-      <TokensModal
-        open={tokensModal1}
-        setOpen={setTokensModal1}
-        setSelectedToken={setFromToken}
-      />
-      <TokensModal
-        open={tokensModal2}
-        setOpen={setTokensModal2}
-        setSelectedToken={setToToken}
-      />
+      
       <StackingDataModal open={stakeDataModal} setOpen={setStakeDataModal} />
       <HarvestModal open={harvestModal} setOpen={setHarvestModal} />
       <StackingModal open={stakeModal} setOpen={setStakeModal} />
