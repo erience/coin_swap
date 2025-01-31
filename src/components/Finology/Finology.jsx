@@ -23,6 +23,11 @@ const Finology = () => {
       logo: "https://tokens.pancakeswap.finance/images/0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56.png",
       type: "token",
     });
+    const hamdleSwap=()=>{
+      const temp=fromToken;
+      setFromToken(toToken);
+      setToToken(temp);
+    }
     return (
       <React.Fragment>
         <div className="relative w-full border border-[#2b5876] rounded-lg overflow-hidden z-[1]">
@@ -78,7 +83,7 @@ const Finology = () => {
               <div className="col-span-12 text-center">
                 <button
                   type="button"
-                  className="w-11 h-11 inline-flex items-center justify-center text-black bg-white rounded-full hover:text-white hover:bg-purple-500 transition-all duration-300"
+                  className="w-11 h-11 inline-flex items-center justify-center text-black bg-white rounded-full hover:text-white hover:bg-purple-500 transition-all duration-300" onClick={hamdleSwap}
                 >
                   <ArrowDownUpIcon size={18} />
                 </button>
